@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>11-класс Акыркы коңгуроо</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia,serif;
+}
+
+body{
+background:#f8f0e8;
+display:flex;
+justify-content:center;
+overflow-x:hidden;
+}
+
+.phone{
+width:390px;
+min-height:100vh;
+background:#f8f0e8;
+overflow:hidden;
+position:relative;
+}
+
+/* Жылдыз анимациясы */
+
+.stars span{
+position:absolute;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+animation:fall 6s linear infinite;
+opacity:.8;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-100px);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+}
+
+.stars span:nth-child(1){left:10%;animation-delay:1s}
+.stars span:nth-child(2){left:30%;animation-delay:3s}
+.stars span:nth-child(3){left:70%;animation-delay:2s}
+.stars span:nth-child(4){left:90%;animation-delay:5s}
+
+/* Конверт */
+
+.cover{
+
+height:100vh;
+background:#4a0210;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+position:relative;
+}
+
+.cover h1{
+
+color:white;
+font-size:28px;
+margin-bottom:25px;
+text-align:center;
+}
+
+.envelope{
+
+width:300px;
+height:200px;
+background:#5d0618;
+position:relative;
+border-radius:10px;
+}
+
+.envelope::before{
+
+content:"";
+position:absolute;
+
+border-left:150px solid #5d0618;
+border-right:150px solid #5d0618;
+border-top:100px solid #530e1c; 
+}
+
+.seal img{
+
+position:absolute;
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:80px;
+height:80px;
+
+border-radius:50%;
+
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-weight:bold;
+cursor:pointer;
+
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:translate(-50%,-50%) scale(1.1);
+
+}
+
+}
+
+/* Контент */
+
+.content{
+
+display:none;
+padding:20px;
+
+}
+
+.card{
+
+background:#40020e;  /*------------------------------------*/
+padding:25px;
+border-radius:30px;
+color:white;
+border:6px solid #f3dfca;
+text-align:center;
+margin-bottom:25px;
+}
+
+.card h2{
+
+margin-bottom:20px;
+font-size:30px;
+}
+
+.card p{
+
+line-height:1.8;
+}
+
+/* Анимация */
+
+.section{
+
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+padding:20px;
+}
+
+.show{
+
+opacity:1;
+transform:translateY(0);
+}
+
+.sectionTitle{
+
+font-size:30px;
+color:#760018;
+text-align:center;
+margin-bottom:20px;
+}
+
+.sectionTitle1{
+
+font-size:20px;
+padding: 10px;
+color: #760018;
+text-align:center;
+margin-bottom:20px;
+
+}
+
+/* Галерея */
+
+
+
+.gallery img{
+
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:20px;
+border:4px solid #fff;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+/* Акыркы блок */
+
+.footer{
+
+margin-top:30px;
+padding:40px;
+background:#530e1c;
+color:white;
+border-radius:30px 30px 0 0;
+text-align:center;
+font-size:25px;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+
+<div class="cover" id="cover">
+
+<div class="stars">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<h1>
+    ✨ЧАКЫРУУ✨
+</h1>
+
+<div class="envelope">
+
+<div class="seal">
+<img onclick="openInvite()" src="https://w7.pngwing.com/pngs/182/368/png-transparent-gold-wax-seal-wax-seal-gold-wax-seal-wax-seal-seal-thumbnail.png" alt="">
+</div>
+
+</div>
+
+</div>
+
+<div class="content" id="content">
+
+<div class="card">
+
+<h2>Урматтуу ата-энелер🌸</h2>
+
+<p>
+
+Сиздерди кино атмосферасында өтө турган
+<b>"Акыркы коңгуроо"</b>
+аземине чакырабыз 💫
+<br><br>
+</p>
+
+
+
+
+
+
+</div>
+
+
+<div class="section">
+    <p class="sectionTitle1">
+        Бул күн — балалык менен коштошуп, жаңы өмүр жолуна кадам таштаган эң толкунданткан көз ирмемдердин бири… Биздин кубанычыбызга күбө болуп, эстеликке айланган ушул кечеде жан дүйнөбүзгө жылуулук тартуулап, жаныбызда болуңуздар. 🤍
+    </p>
+</div>
+<div class="section">
+
+   
+    <br><br><br>
+
+<h2 class="sectionTitle">
+Биздин мектеп күндөрү ❤️
+</h2>
+
+<div class="gallery">
+
+<img src="./img/il.jpg">
+
+<img src="./img/ili.jpg">
+
+<img src="./img/ilim.jpg">
+
+<img src="./img/ilima.jpg">
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2 class="sectionTitle">
+Эскерүүлөр ✨
+</h2>
+
+<p style="text-align:center;line-height:2">
+
+Кечээ эле биринчи класска келгендей элек,
+бүгүн болсо жаңы жашоого кадам таштап жатабыз...
+
+</p>
+
+</div>
+
+<div class="section">
+
+    <div class="card">
+        📍 Өтүүчү жери:ОшМУнун башкы имараты <br>
+    🕰 Убактысы: 8:00 <br>
+    📅 Күнү:30.06.2026
+    </div>
+
+<div class="gallery">
+
+<img src="./img/ili.jpg">
+
+<img src="./img/ilim.jpg">
+
+</div>
+
+
+
+</div>
+
+
+<div class="footer">
+
+    Сиздерди чыдамсыздык менен күтөбүз! ✨
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openInvite(){
+
+document.getElementById("cover")
+.style.display="none";
+
+document.getElementById("content")
+.style.display="block";
+
+}
+
+
+const sections=document.querySelectorAll(".section");
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(section=>{
+
+let top=section.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+
+section.classList.add("show");
+
+}
+
+})
+
+})
+
+</script>
+
+</body>
+</html>
